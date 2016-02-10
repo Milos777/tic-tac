@@ -1,0 +1,246 @@
+/* line 1, ../sass/mixins/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../sass/mixins/_reset.scss */
+html {
+  line-height: 1;
+}
+
+/* line 26, ../sass/mixins/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 30, ../sass/mixins/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 35, ../sass/mixins/_reset.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 41, ../sass/mixins/_reset.scss */
+q, blockquote {
+  quotes: none;
+}
+
+/* line 44, ../sass/mixins/_reset.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 49, ../sass/mixins/_reset.scss */
+a img {
+  border: none;
+}
+
+/* line 53, ../sass/mixins/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 6, ../sass/mixins/_helpers.scss */
+.clearfix, body, .container {
+  *zoom: 1;
+}
+/* line 8, ../sass/mixins/_helpers.scss */
+.clearfix::before, body::before, .container::before, .clearfix::after, body::after, .container::after {
+  content: "";
+  display: table;
+}
+/* line 12, ../sass/mixins/_helpers.scss */
+.clearfix::after, body::after, .container::after {
+  clear: both;
+}
+
+/* line 19, ../sass/mixins/_helpers.scss */
+.clear {
+  clear: both;
+}
+
+/* line 22, ../sass/mixins/_helpers.scss */
+.hide {
+  display: none;
+}
+
+/* line 23, ../sass/mixins/_helpers.scss */
+.block, .container {
+  display: block;
+}
+
+/* line 24, ../sass/mixins/_helpers.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 26, ../sass/mixins/_helpers.scss */
+.fleft {
+  float: left;
+}
+
+/* line 27, ../sass/mixins/_helpers.scss */
+.fright {
+  float: right;
+}
+
+/* line 29, ../sass/mixins/_helpers.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 30, ../sass/mixins/_helpers.scss */
+.relative {
+  position: relative;
+}
+
+/* line 31, ../sass/mixins/_helpers.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 33, ../sass/mixins/_helpers.scss */
+.vertical-top {
+  vertical-align: top;
+}
+
+/* line 34, ../sass/mixins/_helpers.scss */
+.vertical-middle {
+  vertical-align: middle;
+}
+
+/* line 36, ../sass/mixins/_helpers.scss */
+.table {
+  display: table;
+}
+
+/* line 37, ../sass/mixins/_helpers.scss */
+.table-row {
+  display: table-row;
+}
+
+/* line 38, ../sass/mixins/_helpers.scss */
+.table-cell {
+  display: table-cell;
+}
+
+/* line 40, ../sass/mixins/_helpers.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 41, ../sass/mixins/_helpers.scss */
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* line 42, ../sass/mixins/_helpers.scss */
+.capitalize {
+  text-transform: capitalize;
+}
+
+/*
+|------------------------------------------------------------
+| Config
+|------------------------------------------------------------
+*/
+/* line 11, ../sass/mixins/_config.scss */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 15, ../sass/mixins/_config.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 19, ../sass/mixins/_config.scss */
+body {
+  background: url("../img/wall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* line 26, ../sass/mixins/_config.scss */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 25, ../sass/mixins/_typography.scss */
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+/* line 31, ../sass/mixins/_typography.scss */
+body {
+  font-size: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 31, ../sass/mixins/_typography.scss */
+  body {
+    font-size: 90%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 31, ../sass/mixins/_typography.scss */
+  body {
+    font-size: 80%;
+  }
+}
+
+/* line 11, ../sass/mixins/_container.scss */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* line 1, ../sass/blocks/_game.scss */
+#tic-tac {
+  display: block;
+  margin: 10% auto;
+}
+
+/* line 6, ../sass/blocks/_game.scss */
+.canvas-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+/* line 13, ../sass/blocks/_game.scss */
+.canvas-wrapper-parent {
+  transform-style: preserver-3d;
+}

@@ -1,0 +1,9 @@
+//---------------------------------
+//----------------INPUT PLACEHOLDER
+//---------------------------------
+
+@mixin input-placeholder {
+    &::-webkit-input-placeholder { @content; }
+         &:-ms-input-placeholder { @content; }
+              &:-moz-placeholder { @content; }
+}

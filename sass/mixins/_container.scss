@@ -1,0 +1,16 @@
+//-------------------------
+//----------------CONTAINER
+//-------------------------
+
+//------DIMENSITONS
+$container-width:             1280px;
+$container-width--desk-small: 900px;
+$container-width--tablet:     600px;
+$container-width--phone:      300px;
+
+.container {
+    @extend .block, %clearfix;
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+}

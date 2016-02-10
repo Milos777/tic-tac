@@ -1,0 +1,29 @@
+/*
+|------------------------------------------------------------
+| Config
+|------------------------------------------------------------
+*/
+
+// Set the global compass vars.
+$browser-minimum-versions: ('ie': "9");
+
+// Base settings
+* {
+	@include box-sizing(border-box);
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	@extend %clearfix;
+	background: url('../img/wall.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+img {
+	display: block;
+	max-width: 100%;
+}

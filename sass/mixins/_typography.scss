@@ -1,0 +1,37 @@
+//--------------------------
+//----------------TYPOGRAPHY
+//--------------------------
+
+//------FONT VARIABLES
+$main-font:      "";
+$main-font-bold: "";
+$base-font:      Arial, Helvetica, Tahoma, sans-serif;
+
+$base-font-size: 10px;
+
+//------FONT PLACEHOLDERS
+%main-font      { font-family: $main-font; }
+%main-font-bold { font-family: $main-font-bold; }
+%basic-font     { font-family: $base-font; }
+
+//------Text weight
+%font-thin      { font-weight: 100; }
+%font-light     { font-weight: 300; }
+%font-normal    { font-weight: 400; }
+%font-bold      { font-weight: 700; }
+%font-extrabold { font-weight: 900; }
+
+//------BASE FONT RESET
+html {
+    font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased !important;
+            text-rendering: optimizeLegibility !important;
+}
+
+body {
+    font-size: 100%;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+    @include breakpoint (tablet) { font-size: 90%; }
+    @include breakpoint (phone)  { font-size: 80%; }
+}

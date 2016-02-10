@@ -1,0 +1,12 @@
+//--------------------------
+//----------------CALC MIXIN
+//--------------------------
+
+// EXAMPLE
+	// @include calc (width, 100%, "-", 50px, 90%);
+
+@mixin calc($property, $firstVar, $operation, $secondVar, $fallback) {
+	#{$property}: $fallback;     // For browsers that do not support calc
+	#{$property}: -webkit-calc(#{$firstVar} #{$operation} #{$secondVar});
+	#{$property}: 		  calc(#{$firstVar} #{$operation} #{$secondVar});
+}

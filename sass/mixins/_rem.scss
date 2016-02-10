@@ -1,0 +1,7 @@
+//-------------------------
+//----------------REM MIXIN
+//-------------------------
+@mixin rem ($size) {
+    font-size: round(( $size * $base-font-size )); // FALLBACK IN PIXELS
+    font-size: $size + rem;
+}

@@ -1,0 +1,44 @@
+//-------------------------------
+//----------------MEDIA VARIABLES
+//-------------------------------
+$minWidth:       320px;
+$phone--medium:  480px;
+$tablet:         768px;
+$desktop:        1024px;
+$desktop--large: 1280px;
+
+//-------------------------------
+//---------------BREAKPOINT MIXIN
+//-------------------------------
+@mixin breakpoint ( $value1, $value2: null ) {
+
+    // @include breakpoint (phone);
+    @if $value1 == 'phone' {
+        @media (min-width: $minWidth) and (max-width: $tablet - 1) { @content; }             // 320px - 767px
+    }
+
+    @else if $value1 == 'phone-medium' {
+        @media (min-width: $minWidth) and (max-width: $phone--medium - 1) { @content; }      // 320px - 479px
+    }
+
+    @else if $value1 == 'tablet' {
+        @media (min-width: $tablet) and (max-width: $desktop - 1) { @content; }              // 768px - 1023px
+    }
+
+    @else if $value1 == 'desktop-small' {
+        @media (min-width: $desktop) and (max-width: $desktop--large -1) { @content; }       // 1024px - 1279px
+    }
+
+    @else if $value1 == 'desktop-only' {
+        @media (min-width: $desktop) { @content; }                                           // 1024px < SCREEN
+    }
+
+    @else if $value1 == 'to-desktop' {
+        @media (min-width: $minWidth) and (max-width: $desktop - 1) { @content; }            // 320px - 1023px
+    }
+
+    // @include breakpoint (320px, 480px);
+    @else {
+        @media (min-width: $value1) and (max-width: $value2) { @content; }                   // Value1 - Value2
+    }
+}
